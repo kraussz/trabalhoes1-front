@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cadlicitacao.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src = "cadlicitacaoscript.js" defer></script>
+    <title>modelo html</title>
+</head>
+
+<body>
+
+    <!-- Sidebar-->
+    <div class="sidebar">
+        <a href="./index.html" class="logo">
+            <i class='bx bxs-shopping-bags'></i>
+            <div class="logo-name"><span>lici</span>shop</div>
+        </a>
+        <ul class="side-menu">
+            <li><a href="./index.html"><i class='bx bxs-dashboard' ></i>inicio</a></li>
+            <li><a href=./lici.html><i class='bx bxs-store-alt' ></i>licitação</a></li>
+            <li class="active"><a href="cadlicitacao.html"><i class='bx bxs-objects-horizontal-left' ></i>publicar</a></li>
+            <li><a href="./cadastro.html"><i class='bx bx-male' ></i>minha conta</a></li>
+            <li><a href="./processo.html"><i class='bx bxs-dashboard' ></i>processo</a></li>
+
+        </ul>
+        <ul class="side-menu">
+            <li>
+                <a ref="#" class="logout">
+                    <iclass='bx bx-log-out-circle ></i>
+                    sair
+                </a>
+            </li>
+        </ul>
+</div> 
+ <!--end of sidebar-->
+ 
+     <!-- Main Content -->
+     <div class="content">
+        <!-- Navbar -->
+        <nav>
+            <i class='bx bx-menu'></i>
+            <form action="#">
+                <div class="form-input">
+                    <input type="search" placeholder="Search...">
+                    <button class="search-btn" type="submit"><i class='bx bx-search'></i></button>
+                </div>
+               
+            </form>
+            <input type="checkbox" id="theme-toggle" hidden>
+            <label for="theme-toggle" class="theme-toggle"></label>
+            <a href="#" class="notif">
+                <i class='bx bx-bell'></i>
+                <!--<span class="count"></span>-->
+            </a>
+            <a href="#" class="profile">
+                <img src="o homem.jpg">
+            </a>
+        </nav>
+
+        <!-- End of Navbar -->
+<main>
+    <div class="header">
+        <div class="left">
+            <h1>Cadastro de Licitação</h1>
+            <ul class="breadcrumb">
+                <li><a href="#">
+                        Analytics
+                    </a></li>
+                /
+                <li><a href="#" class="active">Cadastro de licitação</a></li>
+            </ul>
+        </div>
+        <a class="report"></a>
+     </div>
+        <form action="" class="insights">
+            <li>
+                <i class='bx bx-calendar-check'></i>
+                    <h3>
+                        Nome:
+                    </h3>
+                    <p><input class="bdnome"  type="text" placeholder="nome da licitação..."></p>
+         
+            </li>
+            <li><i class='bx bx-dollar-circle'></i>
+                    <h3>
+                        Setor
+                    </h3>
+                    <p><input class="bdsetor" type="text" placeholder="Setor..."></p>
+                
+            </li>
+
+            <li><i class='bx bx-dollar-circle'></i>
+                    <h3>
+                        Data de inicio:
+                    </h3>
+                    <p><input class="bdinicio" type="text" placeholder="xx/xx/xx..."></p>
+                
+            </li>
+            <li><i class='bx bx-dollar-circle'></i>
+                <h3>
+                    Horario de inicio:
+                </h3>
+                <p><input class="bdhorainicio" type="text" placeholder="13..."></p>
+            
+        </li>
+    <li><i class='bx bx-dollar-circle'></i>
+        <h3>
+            Horario de fim:
+        </h3>
+        <p><input class="bdhorafim" type="text" placeholder="13..."></p>
+    
+</li>
+            <div class='TxtB'>
+                <li class='descricao'>
+                    <div class="flex-container">
+                        <h3>Descrição:</h3>
+                        <textarea cols="40" class="bddesc" placeholder="Escreva um breve descrição sobre do que se trata a sua licitação"></textarea>
+                    </div>
+                </li>
+                <li>
+                    <div class="flex-container">
+                        <button class="confirm-button">Confirmar</button>
+                    </div>
+                </li>
+            </div>
+            
+        </form>
+    </div>   
+</main>
+           <script src="index.js"></script>    
+
+</body>
+</html>
