@@ -25,14 +25,17 @@ const formulario = document.querySelector("form.insights");
       })
       .then(response => {
           if (!response.ok) {
-              return response.json().then(errors => {
-                  throw new Error(errors.join('\n'));
-              });
+              if (response.status === 400) {
+                  throw new Error('Erro: Verifique os dados inseridos e tente novamente.');
+              } else {
+                  throw new Error('Erro ao cadastrar usuário. Status: ' + response.status);
+              }
           }
-          return response.json().then(data => {
-              showSuccessToast("Usuário cadastrado com sucesso!");
-              console.log('Usuário cadastrado com sucesso:', data);
-          });
+          return response.json();
+      })
+      .then(data => {
+          showSuccessToast("Usuário cadastrado com sucesso!");
+          console.log('Usuário cadastrado com sucesso:', data);
       })
       .catch(error => {
           console.error('Erro:', error.message);
